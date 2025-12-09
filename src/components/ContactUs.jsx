@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 import { Mail, Send, CheckCircle, Phone, User, MapPin } from 'lucide-react';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 // --- ANIMATIONS ---
 const fadeInUp = {

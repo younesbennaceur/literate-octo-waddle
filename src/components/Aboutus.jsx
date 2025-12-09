@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+
 import { Users, Award, Clock } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 // Image placeholder (remplace par ton image de mécanicien sombre si tu l'as)
 const ABOUT_IMAGE_URL = "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=2070&auto=format&fit=crop";

@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Gift, Droplets, Disc, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 // Image placeholder (Mains mécanicien / Radiateur)
 const OFFER_IMAGE_URL = "https://images.unsplash.com/photo-1623190823521-2e2d6325514f?q=80&w=2071&auto=format&fit=crop";

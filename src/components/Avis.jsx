@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Star, Quote, CheckCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 // Données fictives des avis (basées sur des vrais avis de garage)
 const reviews = [

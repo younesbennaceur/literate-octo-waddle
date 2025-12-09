@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { Plus, Minus, HelpCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
+
 
 // --- DONNÉES DES QUESTIONS ---
 const faqs = [

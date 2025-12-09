@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+
 import { ArrowRight, ShieldCheck, Star, Wrench, CheckCircle2 } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 // Image placeholder
 const MECHANIC_IMAGE_URL = "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=1974&auto=format&fit=crop";
@@ -107,7 +107,7 @@ export default function Hero() {
                 whileTap={{ scale: 0.95 }}
                 className="bg-red-700 text-white font-bold py-4 px-8 rounded-2xl flex items-center space-x-2 shadow-lg shadow-red-700/30 hover:shadow-xl hover:shadow-red-700/40 transition-all"
               >
-                <span>Prendre Rendez-vous</span>
+                <span>Appeler pour Réserver</span>
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
               

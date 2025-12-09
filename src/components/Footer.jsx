@@ -1,6 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Phone, MapPin, Mail, Facebook, Instagram, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 // --- ANIMATIONS ---
 const fadeInUp = {
@@ -9,14 +10,6 @@ const fadeInUp = {
     opacity: 1, 
     y: 0, 
     transition: { duration: 0.6, ease: "easeOut" } 
-  }
-};
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.1, delayChildren: 0.2 }
   }
 };
 
@@ -33,7 +26,7 @@ export default function Footer() {
           variants={fadeInUp}
           className="text-center border-b border-gray-800 pb-16 mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold  mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-oswald">
             Prêt à découvrir la différence EYFEL ?
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
@@ -42,23 +35,27 @@ export default function Footer() {
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             {/* Bouton Rouge */}
-            <motion.button 
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-[#B91C1C] hover:bg-red-800 text-white font-bold py-3 px-8 rounded-lg shadow-lg shadow-red-900/20 transition-all w-full sm:w-auto"
-            >
-              Demander un Devis
-            </motion.button>
+            <Link to="/contact">
+                <motion.button 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-[#B91C1C] hover:bg-red-800 text-white font-bold py-3 px-8 rounded-lg shadow-lg shadow-red-900/20 transition-all w-full sm:w-auto"
+                >
+                Demander un Devis
+                </motion.button>
+            </Link>
 
             {/* Bouton Blanc */}
-            <motion.button 
-               whileHover={{ scale: 1.05 }}
-               whileTap={{ scale: 0.95 }}
-               className="bg-white hover:bg-gray-100 text-gray-900 font-bold py-3 px-8 rounded-lg shadow-lg flex items-center justify-center gap-2 transition-all w-full sm:w-auto"
-            >
-               <Phone size={18} className="text-[#B91C1C]" />
-               <span>01 23 45 67 89</span>
-            </motion.button>
+            <a href="tel:+33143886162">
+                <motion.button 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-white hover:bg-gray-100 text-gray-900 font-bold py-3 px-8 rounded-lg shadow-lg flex items-center justify-center gap-2 transition-all w-full sm:w-auto"
+                >
+                <Phone size={18} className="text-[#B91C1C]" />
+                <span>+33 1 43 88 61 62</span>
+                </motion.button>
+            </a>
           </div>
         </motion.div>
 
@@ -68,7 +65,7 @@ export default function Footer() {
           
           {/* Col 1 : Marque & Description */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold  uppercase tracking-wide">EYFEL TOUR & SERVICES</h3>
+            <h3 className="text-xl font-bold uppercase tracking-wide font-oswald">EYFEL TOUR & SERVICES</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               Votre partenaire de confiance pour l'entretien, la réparation et le dépannage de votre véhicule. Expertise et transparence garanties.
             </p>
@@ -78,20 +75,20 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2 : Nos Services */}
+          {/* Col 2 : Nos Services (AVEC LES LIENS) */}
           <div>
-            <h3 className="text-lg font-bold  mb-6">Nos Services</h3>
+            <h3 className="text-lg font-bold mb-6 font-oswald">Nos Services</h3>
             <ul className="space-y-3 text-sm text-gray-400">
-              <FooterLink text="Mécanique générale" />
-              <FooterLink text="Carrosserie & Peinture" />
-              <FooterLink text="Pare-brise" />
-              <FooterLink text="Dépannage 24h/7j" />
+              <FooterLink text="Mécanique générale" to="/service/mecanique-generale" />
+              <FooterLink text="Carrosserie & Peinture" to="/service/carrosserie-peinture" />
+              <FooterLink text="Pare-brise" to="/service/pare-brise" />
+              <FooterLink text="Dépannage 24h/7j" to="/service/depannage-24-7" />
             </ul>
           </div>
 
           {/* Col 3 : Horaires */}
           <div>
-            <h3 className="text-lg font-bold  mb-6">Horaires</h3>
+            <h3 className="text-lg font-bold mb-6 font-oswald">Horaires</h3>
             <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex justify-between">
                 <span>Lundi - Vendredi</span>
@@ -110,19 +107,19 @@ export default function Footer() {
 
           {/* Col 4 : Contact */}
           <div>
-            <h3 className="text-lg font-bold mb-6">Contact</h3>
+            <h3 className="text-lg font-bold mb-6 font-oswald">Contact</h3>
             <ul className="space-y-4 text-sm text-gray-400">
               <li className="flex items-start gap-3">
                 <MapPin className="text-[#B91C1C] flex-shrink-0 mt-1" size={18} />
-                <span>123 Avenue de la Mécanique,<br/>75000 Paris, France</span>
+                <span>183 Av. Aristide Briand, <br/>93190 Livry-Gargan</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-[#B91C1C] flex-shrink-0" size={18} />
-                <span className="hover:text-white transition-colors cursor-pointer">01 23 45 67 89</span>
+                <a href="tel:+33143886162" className="hover:text-white transition-colors cursor-pointer">+33 1 43 88 61 62</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-[#B91C1C] flex-shrink-0" size={18} />
-                <span className="hover:text-white transition-colors cursor-pointer">contact@eyfel-services.fr</span>
+                <a href="mailto:contact@eyfel-services.fr" className="hover:text-white transition-colors cursor-pointer">contact@eyfel-services.fr</a>
               </li>
             </ul>
           </div>
@@ -141,17 +138,19 @@ export default function Footer() {
   );
 }
 
-// --- SOUS-COMPOSANTS POUR ÉVITER LA RÉPÉTITION ---
+// --- SOUS-COMPOSANTS ---
 
-// Lien avec animation de flèche au survol
-function FooterLink({ text }) {
+// Lien avec animation de flèche au survol (AVEC LINK)
+function FooterLink({ text, to }) {
   return (
     <motion.li 
-      className="group flex items-center gap-2 cursor-pointer hover:text-white transition-colors"
+      className="group"
       whileHover={{ x: 5 }}
     >
-      <ArrowRight size={12} className="opacity-0 group-hover:opacity-100 text-[#B91C1C] transition-opacity" />
-      <span>{text}</span>
+      <Link to={to} className="flex items-center gap-2 cursor-pointer hover:text-white transition-colors">
+        <ArrowRight size={12} className="opacity-0 group-hover:opacity-100 text-[#B91C1C] transition-opacity" />
+        <span>{text}</span>
+      </Link>
     </motion.li>
   );
 }

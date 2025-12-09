@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Search, Clock, FileText } from 'lucide-react';
 
+import { Search, Clock, FileText } from 'lucide-react';
+import { motion } from 'framer-motion';
 // --- ANIMATIONS CONFIG ---
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
