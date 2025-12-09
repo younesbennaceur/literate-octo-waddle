@@ -140,13 +140,15 @@ export default function Navbar() {
           >
             +33 1 43 88 61 62
           </a>
-
-          <button 
-            onClick={() => scrollToSection('contact')} 
+          <a href="tel:+33143886162" >
+             <button 
             className="bg-[#B91C1C] text-white px-6 py-2.5 rounded-lg font-medium text-sm hover:bg-black transition-all"
           >
             Appeler pour Réserver
           </button>
+             </a>
+
+         
         </div>
 
         {/* Mobile Menu Button */}
@@ -203,9 +205,13 @@ export default function Navbar() {
              <a href="tel:+33143886162" className="text-center text-[#B91C1C] font-bold text-xl">
                 +33 1 43 88 61 62
              </a>
-             <button onClick={() => scrollToSection('contact')} className="w-full text-center bg-[#1F2937] text-white font-medium py-4 rounded-xl shadow-lg">
-                Devis Gratuit
-             </button>
+              <a href="tel:+33143886162" >
+             <button 
+            className="bg-[#B91C1C] w-full text-white px-6 py-2.5 rounded-lg font-medium text-sm hover:bg-black transition-all"
+          >
+            Appeler pour Réserver
+          </button>
+             </a>
           </div>
         </div>
       )}
